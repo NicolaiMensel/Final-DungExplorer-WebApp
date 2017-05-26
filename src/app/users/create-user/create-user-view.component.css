@@ -1,0 +1,89 @@
+.main-content{
+  background-image: url('/assets/images/wood-texture-large.jpg');
+}
+
+.title{
+  font-family: black-knight;
+  font-size: 50px;
+  margin-bottom: 0px;
+  margin-top: -55px;
+}
+
+
+
+.register-content{
+  background-color: transparent;
+  background-image: url('/assets/images/cool-scroll.png');
+  box-shadow: 0px 0px black;
+  border: 0px solid black;
+  margin: 0;
+  width: 453px;
+  height: 560px;
+}
+
+.create-content{
+  margin-top: 100px;
+}
+
+.back-button{
+  background-image: url('/assets/images/feather-pen.png');
+  background-color: transparent;
+  border: 0px;
+  width: 210px;
+  height: 40px;
+  margin-right: 120px;
+  margin-top: 25px;
+  font-family: black-knight;
+  padding-top: 3px;
+}
+
+.back-button:hover {
+  color: whitesmoke;
+  text-shadow: 2px 2px black;
+  cursor: pointer;
+}
+
+.input-field{
+  margin-top: 30px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid black;
+  font-family: black-knight;
+  font-size: 25px;
+}
+
+.input-field::placeholder{
+  color: black;
+}
+
+.input-field:focus {
+  outline: -webkit-focus-ring-color auto 0px;
+}
+.register-button {
+  margin-top: 65px;
+  font-size: 20px;
+  font-family: black-knight;
+  text-shadow: 2px 2px black;
+  height: 48px;
+  width: 48px;
+  padding: 0px;
+  margin-left: 19px;
+  border-radius: 100px;
+  background-color: transparent;
+  border: 0px;
+}
+
+.register-button:hover{
+  background-image: url('/assets/images/knight-icon-black.png');
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+

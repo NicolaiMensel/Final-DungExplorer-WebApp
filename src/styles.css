@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+@font-face {
+  font-family: fairy-dust;
+  src: url('/assets/fonts/FairyDustB.ttf') format('truetype');
+}
+@font-face {
+  font-family: barbarian;
+  src: url('/assets/fonts/Barbarian.ttf') format('truetype');
+}
+@font-face {
+  font-family: black-knight;
+  src: url('/assets/fonts/BlackKnightFLF.ttf') format('truetype');
+}
+@font-face {
+  font-family: celtic;
+  src: url('/assets/fonts/celticmd.ttf') format('truetype');
+}
+@font-face {
+  font-family: lifecraft;
+  src: url('/assets/fonts/LifeCraft_Font.ttf') format('truetype');
+}
+@font-face {
+  font-family: mystery-quest;
+  src: url('/assets/fonts/MysteryQuest-Regular.ttf') format('truetype');
+}
+html{
+  min-height: 100%;
+  height: 100%;
+}
+
+body {
+  position: absolute;
+  top:0;
+  bottom: 0;
+  right:0;
+  left:0;
+  background-image: url("/assets/images/rpg_bg.jpg");
+  margin: 0px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100%;
+  height: 100%;
+}

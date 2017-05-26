@@ -1,0 +1,32 @@
+
+
+.example-fill-remaining-space {
+flex: 1 1 auto;
+}
+
+.mainMenuBar{
+  z-index: 1;
+  position: fixed;
+  margin-top: 0px;
+  /**background-image: url('/assets/images/wood-texture-large.jpg');**/
+  background-color: whitesmoke;
+}
+
+.end-line{
+  z-index: 998;
+  position: fixed;
+  width: 100%;
+  margin-top: 62px;
+  border: 1px solid black;
+}
+
+button {
+  font-family: black-knight;
+  font-size: 48px;
+  color: black;
+}
+
+md-toolbar{
+  background-color: white;
+}
+

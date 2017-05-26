@@ -1,0 +1,6 @@
+<mrr-toolbar></mrr-toolbar>
+<app-show-topic-view
+  [topic]="topic"
+  (tryAddCommentEmitter)="addComment($event)"
+  (tryDeleteTopicEmitter)="deleteTopic($event)"
+></app-show-topic-view>

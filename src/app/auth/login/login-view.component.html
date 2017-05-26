@@ -1,0 +1,42 @@
+<div fxFlexFill [fxLayout]="row" class="main-content" fxLayoutAlign="center center">
+
+  <div class="container-border" align="center">
+    <div class="lock-container" >
+      <div class="login-content" >
+
+        <p *ngIf="signInError && signInError.length > 0"
+           class="error-message">
+          {{signInError}}
+        </p>
+        <button class="back-button" (click)="goBack()">Back</button>
+        <button class="register-button" (click)="register()">Register</button>
+        <form (ngSubmit)="tryLogin($event)">
+          <div class="center-content" >
+              <input class="input-field"
+                     placeholder="Email"
+                     name="email"
+                     [(ngModel)]="user.email">
+
+              <input class="input-field"
+                     placeholder="Password"
+                     name="password"
+                     type="password"
+                     [(ngModel)]="user.password">
+          </div>
+
+              <button id="test" type="submit" class="sign-in-button">Sign in</button>
+
+        </form>
+
+      </div>
+
+      <div *ngIf="tryingToLogIn" fxFlexFill [fxLayout]="column" fxLayoutAlign="center center">
+        <h3>
+          <fa [name]="'handshake-o'"></fa>
+          Trying to login, please wait...!
+        </h3>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+<div fxLayoutAlign="center">
+  <h1 fxLayoutAlign="center" class="create-topic-title">Your New Topic</h1>
+</div>
+<div [fxLayout]="'row'" fxLayoutAlign="center">
+  <md-card class="main-card-container">
+    <div [fxLayout]="'column'">
+      <form (ngSubmit)="tryCreateForum($event)">
+        <md-input-container [fxLayout]="'column'" class="title-input" flex>
+          <input mdInput size="100%"
+                 name="titleInput"
+                 mdInput placeholder="Title.."
+                 [(ngModel)]="newTopic.title">
+        </md-input-container>
+
+        <div *ngIf="!changingImage" fxLayoutAlign="center center" [fxLayout]="'column'">
+          <img class="topic-img"
+               [src]="data && data.image ? data.image : 'http://placehold.it/625x339?text=Awesome Image here!'">
+
+          <!--<button fxLayoutAlign="center center" md-raised-button
+                  type="file" (change)="fileChangeListener($event)"
+                  (click)="changeImage()" [color]="'primary'" class="change-picture-btn">Choose Picture
+          </button>-->
+          <div class="upload-picture-div">
+            <label id="upload-file-label" aria-label="backup" class="material-icons">add_box
+              <input type="file" (change)="fileChangeListener($event)">
+            </label>
+          </div>
+        </div>
+
+        <div *ngIf="changingImage" fxLayoutAlign="center center" [fxLayout]="'column'">
+          <img-cropper #cropper [image]="data" [settings]="cropperSettings"></img-cropper>
+          <br>
+          <button fxLayoutAlign="center" md-raised-button
+                  type="button" (click)="saveNewImage()" [color]="'primary'" class="save-picture-btn">Save
+          </button>
+        </div>
+
+        <md-input-container class="md-block"  [fxLayout]="'column'">
+          <textarea mdInput
+                    md-maxlength="150" rows="10"
+                    md-select-on-focus
+                    name="messageInput"
+                    mdInput placeholder="Message.."
+                    [(ngModel)]="newTopic.message">
+          </textarea>
+        </md-input-container>
+
+        <button md-raised-button class="submit-topic-btn" type="submit">Submit</button>
+        <button md-raised-button class="cancel-topic-btn" routerLink="/topics">Cancel</button>
+      </form>
+    </div>
+  </md-card>
+</div>
+
+

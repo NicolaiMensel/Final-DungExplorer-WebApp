@@ -1,0 +1,67 @@
+.create-topic-title{
+  font-size: 42px;
+  text-shadow: 1px 1px silver;
+  margin-top: 80px;
+}
+.main-card-container{
+  width: 600px;
+  background-image: url('/assets/images/wood-texture-large.jpg');
+}
+.title-input{
+  font-size: 28px;
+}
+.change-picture-btn{
+  margin-top: 5px;
+  color: whitesmoke;
+}
+.save-picture-btn{
+  margin-top: -15px;
+}
+.submit-topic-btn{
+  background-color: limegreen;
+  color: whitesmoke;
+}
+.cancel-topic-btn{
+  background-color: indianred; float: right;
+  color: whitesmoke;
+}
+
+.md-block{
+  margin-top: 5px;
+}
+input[type="file"] {
+  display: none;
+}
+
+.upload-picture-div{
+  margin-top: -145px;
+  margin-left: 290px;
+  position: absolute;
+  z-index: 999;
+}
+#upload-file-label {
+  display: inline-block;
+  height: 40px;
+  width: 48px;
+  cursor: pointer;
+}
+
+.topic-title {
+  font-size: 30px;
+}
+
+.material-icons{
+  font-size: 48px;
+  color: #3F51B5;
+}
+
+.topic-img {
+  border: 2px solid black;
+  box-shadow: 1px 1px grey;
+}
+
+
+
+
+
+

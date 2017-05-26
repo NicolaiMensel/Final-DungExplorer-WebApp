@@ -1,0 +1,116 @@
+
+<div class="main-div-container" fxLayoutAlign="center">
+  <div class="center-div-container" fxLayoutAlign="center">
+    <ul class="topics-main-ul" *ngIf="!!topic.user.id">
+      <li class="event-list">
+        <md-card class="event-card">
+          <div style="float: right">
+            <p class="default-text">{{getDateAsString(topic.createdAt)}}</p>
+            <p class="default-text anchor-right">Views: 0</p>
+            <br>
+            <p class="default-text anchor-right">Comments: {{ topic.subTopics ? topic.subTopics.length : "0" }}</p>
+            <button md-raised-button class="submit-topic-btn anchor-right-buttom" *ngIf="isLoggedIn()" (click)="onClick(topic)">Reply</button>
+            <button class="delete-topic-btn anchor-left-buttom" *ngIf="isAuthorized(topic.user)" (click)="deleteTopic(topic)">X</button>
+          </div>
+          <md-card-header>
+            <div md-card-avatar class="example-header-image">
+              <img class="content-image" src="{{topic.user.picture}}">
+            </div>
+            <div class="topic-title">
+              <p class="title-text default-text">{{topic.title}}</p>
+              <md-card-subtitle class="username-card-sub"><p style="margin-top: 6px; margin-right: 5px;" class="default-text anchor-left">By: </p>
+                <p class="default-text link anchor-right">{{topic.user.name + " [" + topic.user.role + "]"}}</p></md-card-subtitle>
+            </div>
+          </md-card-header>
+          <hr>
+          <md-card-content align="center" *ngIf="!!topic.imageUrl" class="image-card-content">
+            <img class="content-image" src="{{topic.imageUrl}}">
+          </md-card-content>
+          <md-card-content>
+            <pre class="topic-text-content content-font default-text">{{topic.message}}</pre>
+          </md-card-content>
+        </md-card>
+        <!--Main Topic Reply Here-->
+        <form (submit)="tryAddComment(newComment, topic)">
+          <md-card class="event-card" *ngIf="hideme[topic.id] == false">
+            <div class="comment-input-container">
+              <md-input-container style="margin-top: 5px;" class="md-block" [fxLayout]="'column'" >
+        <textarea mdInput
+                  md-maxlength="150" rows="10"
+                  md-select-on-focus
+                  name="messageInput"
+                  mdInput placeholder="Write a comment"
+                  [(ngModel)]="newComment.message">
+          </textarea>
+
+              </md-input-container>
+              <button md-raised-button style="margin-left: 83%;" class="submit-topic-btn" type="submit">Add comment</button>
+            </div>
+          </md-card>
+        </form>
+      </li>
+      <!--Comments Here-->
+      <li class="event-list" *ngFor="let comment of topic.subTopics">
+        <md-card class="event-card">
+          <div style="float: right">
+            <p class="default-text">{{getDateAsString(comment.createdAt)}}</p>
+            <button md-raised-button class="submit-topic-btn anchor-right-buttom" *ngIf="isLoggedIn()" (click)="onClick(comment)">Reply</button>
+            <button class="delete-topic-btn anchor-left-buttom" *ngIf="isAuthorized(comment.user)" (click)="deleteTopic(comment)">X</button>
+          </div>
+          <md-card-header>
+            <div md-card-avatar class="example-header-image">
+              <img class="content-image" src="{{comment.user.picture}}">
+            </div>
+            <div class="topic-title" fxLayoutAlign="center center">
+              <p class="subTitle-text default-text">{{comment.user.name + " [" + comment.user.role + "]"}}</p>
+            </div>
+          </md-card-header>
+          <md-card-content>
+            <pre class="topic-comment-content content-font default-text">{{comment.message}}</pre>
+          </md-card-content>
+        </md-card>
+        <!--Comment Reply-->
+        <form (submit)="tryAddComment(subComment, comment)">
+          <md-card class="event-card" style="width: 93.5%; float: right;" *ngIf="hideme[comment.id] == false">
+            <div class="comment-input-container">
+              <md-input-container style="margin-top: 5px;" class="md-block" [fxLayout]="'column'" >
+        <textarea mdInput
+                  md-maxlength="150" rows="10"
+                  md-select-on-focus
+                  name="messageInput"
+                  mdInput placeholder="Write a comment"
+                  class="small-text-area"
+                  [(ngModel)]="subComment.message">
+          </textarea>
+
+              </md-input-container>
+              <button md-raised-button style="margin-left: 81.9%;" class="submit-topic-btn" type="submit">Add comment</button>
+            </div>
+          </md-card>
+        </form>
+        <!--SubComments Here-->
+      <ul>
+      <li class="event-list" *ngFor="let subComment of comment.subTopics">
+        <md-card class="subEvent-card">
+          <div style="float: right">
+            <p class="default-text">{{getDateAsString(subComment.createdAt)}}</p>
+            <button class="delete-topic-btn anchor-left-buttom" *ngIf="isAuthorized(subComment.user)" (click)="deleteTopic(subComment)">X</button>
+          </div>
+          <md-card-header>
+            <div md-card-avatar class="example-header-image">
+              <img class="content-image" src="{{subComment.user.picture}}">
+            </div>
+            <div class="topic-title" fxLayoutAlign="center center">
+              <p class="subTitle-text default-text">{{subComment.user.name + " [" + subComment.user.role + "]"}}</p>
+            </div>
+          </md-card-header>
+          <md-card-content>
+            <pre class="topic-subcomment-content content-font default-text" style="text-align: left">{{subComment.message}}</pre>
+          </md-card-content>
+        </md-card>
+      </li>
+      </ul>
+      </li>
+    </ul>
+  </div>
+</div>

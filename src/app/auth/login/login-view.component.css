@@ -1,0 +1,136 @@
+
+
+.example-button-row{
+  display: flex;
+  align-items: right;
+  justify-content: space-around;
+}
+
+
+
+.lock-container {
+  background-image: url('/assets/images/wood-box.jpg');
+  width: 512px;
+  height:512px;
+  border-radius: 300px;
+  margin-top: 83px;
+  border:1px solid transparent;
+}
+
+.back-button{
+  font-size: 30px;
+  font-family: black-knight;
+  color: #C2C3C8;
+  text-shadow: 2px 2px black;
+  transform: rotate(8deg);
+
+  margin-left: 10px;
+  border: 0px;
+  background-color: transparent;
+}
+
+.back-button:hover{
+  color: saddlebrown;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.register-button{
+  font-size: 30px;
+  font-family: black-knight;
+  color: #C2C3C8;
+  text-shadow: 2px 2px black;
+  transform: rotate(-10deg);
+  margin-left: 110px;
+  margin-top: 208px;
+  border: 0px;
+  background-color: transparent;
+
+}
+
+.register-button:hover{
+  color: darkgreen;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.sign-in-button{
+  font-family: black-knight;
+  font-size: 36px;
+  color: #C2C3C8;
+  text-shadow: 2px 2px black;
+  background-color: transparent;
+  box-shadow: none;
+  border: 0px;
+  transform: rotate(-3deg);
+}
+
+.sign-in-button:hover{
+  text-decoration: underline;
+  cursor: pointer;
+  color: darkred;
+}
+
+.container-border {
+  background-image: url('/assets/images/Magic_Circle.png');
+  width: 690px;
+  height:690px;
+}
+
+.center-content{
+  margin-top: -25px;
+  margin-left: 5px;
+}
+
+
+
+
+
+.error-message{
+  color: darkred; font-size: x-small;
+}
+
+.main-content{
+  background-image: url('/assets/images/wood-texture-large.jpg');
+}
+
+.login-content{
+  background-color: transparent;
+  background-image: url('/assets/images/Login.png');
+  box-shadow: 0px 0px black;
+  border: 0px solid black;
+  margin: 0;
+  width: 303px;
+  height: 386px;
+  margin-top: 60px;
+}
+
+.mat-card:not([class*=mat-elevation-z]){
+  box-shadow: 0px 0px black;
+}
+
+.input-field{
+  margin-top: 30px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid black;
+  font-family: black-knight;
+  font-size: 25px;
+  color: darkgoldenrod;
+}
+
+.input-field::placeholder{
+  color: darkgoldenrod;
+  text-shadow: 2px 2px black;
+}
+
+.input-field:focus {
+  outline: -webkit-focus-ring-color auto 0px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}

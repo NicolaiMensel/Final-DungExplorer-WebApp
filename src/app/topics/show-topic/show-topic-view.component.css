@@ -1,0 +1,256 @@
+.event-card {
+  width: 800px;
+  margin-top: 1px;
+  position: relative;
+  padding-bottom:4px;
+  padding-top:4px;
+  padding-left:4px;
+  padding-right:4px;
+  background-image: url('/assets/images/wood-texture-large.jpg');
+  border: 2px solid black;
+}
+
+.subEvent-card {
+  width: 760px;
+  margin-top: 1px;
+  position: relative;
+  padding-bottom:4px;
+  padding-top:4px;
+  padding-left:4px;
+  padding-right:4px;
+  background-image: url('/assets/images/wood-texture-large.jpg');
+  border: 2px solid black;
+
+}
+
+.username-card-sub {
+  margin-bottom: 0px;
+  display:inline-block;
+}
+
+.example-header-image {
+  background-size: cover;
+  margin-top:4px;
+  margin-left:8px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.event-list{
+  list-style-type: none;
+  margin-bottom: 2px;
+  float: left;
+  width: 94.5%;
+}
+
+.add-event-btn{
+  font-size: 45px;
+  color: #C2C3C8;
+  float: right;
+
+  height: 10px;
+}
+
+.add-event-btn:hover{
+  color: #3F51B5;
+  cursor:pointer;
+}
+
+.title-text {
+  font-size: 48px;
+  margin-top:0px;
+  margin-bottom:5px;
+  font-family: black-knight;
+  color: whitesmoke;
+  text-shadow: 1px 4px black;
+}
+
+.subTitle-text{
+  font-size: 30px;
+  margin-top:0px;
+  margin-bottom:5px;
+  font-family: black-knight;
+  color: black;
+  text-shadow: 1px 4px black;
+}
+
+.pHeader{
+  font-family: "Times New Roman";
+  font-size: 28px;
+  text-shadow: 1px 1px black;
+  margin-top: 0px;
+  height:45px;
+  color: black;
+}
+
+.tabMenuBar{
+  width: 100%;
+  height: 45px;
+  box-shadow: 1px 1px lightgrey;
+  background-color: #5261B4;
+}
+.topics-main-ul{
+  width: 100%;
+  height:1040px;
+  margin-top: 20px;
+}
+.create-topic-btn{
+  background-color: darkgrey;
+  color: whitesmoke;
+  float: right;
+  position:fixed;
+  margin-top: 60px;
+}
+
+.submit-topic-btn{
+  background-color: darkgreen;
+  color: whitesmoke;
+  font-family: black-knight;
+  text-shadow: 1px 4px black;
+  font-size: 24px;
+}
+
+.delete-topic-btn{
+  background-color: darkred;
+  color: whitesmoke;
+  font-family: black-knight;
+  text-shadow: 1px 4px black;
+  font-size: 24px;
+  border: 1px solid black;
+}
+
+.delete-topic-btn:hover{
+  cursor: pointer;
+}
+
+.anchor-right-buttom{
+  position: absolute;
+  right:    0;
+  bottom:   0;
+}
+
+.anchor-left-buttom{
+  position: absolute;
+  left:    0;
+  bottom:   0;
+
+}
+
+.topic-btn-container{
+  float: left;
+  bottom: 25px;
+  position: absolute;
+}
+.info-btn{
+  background-color: #3F51B5;
+  color: whitesmoke
+}
+.center-div-container{
+  width: 900px;
+  z-index: 0;
+  margin-top: 4.9vh;
+  height: 100%;
+}
+.main-div-container{
+  width: 100%;
+  height: 100%;
+
+}
+
+.link {
+  font-style: oblique;
+  font-family: black-knight;
+  font-size: 24px;
+}
+
+.link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.default-text {
+  color: white;
+  margin:0px;
+  text-shadow: 2px 2px black;
+}
+
+.content-font{
+  font-size: 20px;
+  font-family: Century;
+  /*Cambria*/
+}
+
+.anchor-right{
+  float: right;
+}
+
+.anchor-left{
+  float: left;
+}
+
+.topic-text-content{
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 35px;
+  padding-top:5px;
+  white-space: pre-wrap;
+}
+
+.topic-comment-content{
+  padding-left: 65px;
+  padding-right: 90px;
+  padding-bottom: 5px;
+  padding-top:5px;
+  white-space: pre-wrap;
+}
+
+.topic-subcomment-content{
+  padding-left: 65px;
+  padding-right: 25px;
+  padding-bottom: 5px;
+  padding-top:5px;
+  white-space: pre-wrap;
+}
+
+.image-card-content{
+  margin-top: 20px;
+}
+
+.content-image{
+  border: 3px solid black;
+  margin-left: -3px;
+}
+
+.comment-input-container{
+  background-color: whitesmoke;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding-left: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.sub-size{
+  max-height: 200px;
+  width: 50%;
+  margin-left: 366px;
+}
+
+.comment-text-area{
+  margin-top: 5px;
+  margin-right: 10px;
+  height: 90px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+
+.small-text-area{
+  height: 4vh;
+}
+
+
+
+

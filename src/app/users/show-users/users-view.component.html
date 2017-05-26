@@ -1,0 +1,20 @@
+<form>
+  <button md-raised-button class="create-user-btn" (click)="tryCreateUser()"  >Create</button>
+  <md-card *ngFor="let user of users | async">
+
+    <h1><fa [name]="'user'" [size]=1></fa>
+      {{user.name}}</h1>
+    <hr/>
+    <p><fa [name]="'envelope'" [size]=1></fa>
+      {{user.email}}</p>
+    <br/>
+    <p><fa [name]="'lock'" [size]=1></fa>
+      {{user.password}}</p>
+    <br/>
+    <p><fa [name]="'calendar'" [size]=1></fa>
+      {{user.age}}</p>
+    <button md-raised-button [color]="'primary'" (click)="tryDeleteUser(user)">Delete</button>
+    <button md-raised-button [color]="'primary'" (click)="tryUpdateUser(user)">Update</button>
+    <p>Id: {{user.$key}}</p>
+  </md-card>
+</form>

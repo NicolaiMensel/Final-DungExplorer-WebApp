@@ -1,0 +1,32 @@
+<div fxFlexFill class="main-content" [fxLayout]="row" fxLayoutAlign="center center">
+  <div class="register-content" align="center">
+    <div class="back-button" (click)="goBack()"></div>
+<form (ngSubmit)="tryRegister()" class="create-content" >
+
+  <h1 class="title" align="center">Register</h1>
+    <input align="center"
+           class="input-field"
+      name="nameInput"
+       placeholder="Name.."
+      [(ngModel)]="newUser.name"><br>
+    <input align="center"
+           class="input-field"
+      name="ageInput"
+      type="number"
+       placeholder="Age.."
+      [(ngModel)]="newUser.age"><br>
+    <input align="center"
+           class="input-field"
+      name="emailInput"
+       placeholder="Email.."
+      [(ngModel)]="newUser.email"><br>
+    <input align="center"
+           class="input-field"
+      name="passwordInput"
+      type="password"
+      placeholder="Password.."
+      [(ngModel)]="newUser.password"><br>
+  <button class="register-button" type="submit"></button>
+</form>
+  </div>
+</div>

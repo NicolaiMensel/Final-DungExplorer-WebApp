@@ -1,0 +1,11 @@
+<md-toolbar class="mainMenuBar" >
+  <button routerLink="/topics" md-button>Forum</button>
+
+  <!-- This fills the remaining space of the current row -->
+  <span class="example-fill-remaining-space"></span>
+  <button *ngIf="!isAuthenticated()" md-button (click)="login()">Sign in<fa [name]="'sign-in'" size=1></fa></button>
+
+  <button *ngIf="!!isAuthenticated()" md-button (click)="logout()">Log out<fa [name]="'log-out'" size=1></fa></button>
+
+</md-toolbar>
+<hr class="end-line">

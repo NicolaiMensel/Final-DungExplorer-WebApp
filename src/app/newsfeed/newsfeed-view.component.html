@@ -1,0 +1,28 @@
+<div class="center-div-container">
+  <ul class="topics-main-ul" >
+    <li *ngFor="let topic of topics" class="event-list">
+      <md-card class="event-card">
+        <md-card-header>
+          <div md-card-avatar class="example-header-image"></div>
+          <md-card-title>{{topic.title}}</md-card-title>
+          <md-card-subtitle>{{topic.user.name}}</md-card-subtitle>
+        </md-card-header>
+        <md-card-content class="image-card-content">
+          <img md-card-image src="{{topic.image}}">
+        </md-card-content>
+        <md-card-content>
+          <p>
+            {{topic.message}}
+          </p>
+          <p>
+            {{topic.timeStamp}}
+          </p>
+        </md-card-content>
+        <md-card-actions class="topic-btn-container">
+          <button md-button class="info-btn">INFO</button>
+        </md-card-actions>
+        <!--Small Menu Here!-->
+      </md-card>
+    </li>
+  </ul>
+</div>

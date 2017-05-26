@@ -1,0 +1,35 @@
+<div fxFlexFill [fxLayout]="row" fxLayoutAlign="center center">
+  <md-card style="margin: 0; width: 200px;">
+    <h1>Register</h1>
+    <form (ngSubmit)="tryRegister($event)">
+      <md-input-container>
+        <input
+          name="nameInput"
+          mdInput placeholder="Name.."
+          [(ngModel)]="inputUser.name">
+      </md-input-container>
+      <md-input-container>
+        <input
+          name="ageInput"
+          type="number"
+          mdInput placeholder="Age.."
+          [(ngModel)]="inputUser.age">
+      </md-input-container>
+      <md-input-container>
+        <input
+          name="emailInput"
+          mdInput placeholder="Email.."
+          [(ngModel)]="inputUser.email">
+      </md-input-container>
+      <md-input-container>
+        <input
+          name="passwordInput"
+          type="password" mdInput
+          placeholder="Password.."
+          [(ngModel)]="inputUser.password">
+      </md-input-container>
+      <button md-raised-button [color]="'primary'" type="submit">Register</button>
+    </form>
+  </md-card>
+</div>
+
