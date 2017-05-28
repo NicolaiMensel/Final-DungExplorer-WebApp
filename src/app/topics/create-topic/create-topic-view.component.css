@@ -1,14 +1,20 @@
 .create-topic-title{
-  font-size: 42px;
-  text-shadow: 1px 1px silver;
+  font-size: 52px;
   margin-top: 80px;
+  font-family: black-knight;
+  color: black;
+  font-style: normal;
+  margin-bottom: 10px;
 }
+
 .main-card-container{
   width: 600px;
   background-image: url('/assets/images/wood-texture-large.jpg');
 }
 .title-input{
-  font-size: 28px;
+  font-size: 38px;
+  color: whitesmoke;
+  font-family: black-knight;
 }
 .change-picture-btn{
   margin-top: 5px;
@@ -16,18 +22,27 @@
 }
 .save-picture-btn{
   margin-top: -15px;
+  font-family: black-knight;
+  font-size: 32px;
 }
 .submit-topic-btn{
   background-color: limegreen;
   color: whitesmoke;
+  font-family: black-knight;
+  font-size: 32px;
 }
 .cancel-topic-btn{
   background-color: indianred; float: right;
   color: whitesmoke;
+  font-family: black-knight;
+  font-size: 32px;
 }
 
 .md-block{
   margin-top: 5px;
+  font-size: 20px;
+  font-family: Century;
+  color: white;
 }
 input[type="file"] {
   display: none;
@@ -46,10 +61,6 @@ input[type="file"] {
   cursor: pointer;
 }
 
-.topic-title {
-  font-size: 30px;
-}
-
 .material-icons{
   font-size: 48px;
   color: #3F51B5;
@@ -57,7 +68,6 @@ input[type="file"] {
 
 .topic-img {
   border: 2px solid black;
-  box-shadow: 1px 1px grey;
 }
 
 

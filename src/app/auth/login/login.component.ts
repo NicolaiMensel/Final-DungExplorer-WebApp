@@ -38,12 +38,12 @@ export class LoginComponent implements OnInit {
         {
           this.loginError=null;
 
-          this.userService.getMe().subscribe(user => localStorage.setItem('loggedInUser', JSON.stringify(user)))
-          this.router.navigate([this.returnUrl.toString().replace(",", "/")])
-            .then(() => this.loginValidationBar.open("Welcome!", "Ok", {
-            duration: 3000,
-          }));
-
+          this.userService.getMe().subscribe(user => {localStorage.setItem('loggedInUser', JSON.stringify(user));
+            this.router.navigate([this.returnUrl.toString().replace(",", "/")])
+              .then(() => this.loginValidationBar.open("Welcome " + user.name + "!", "Ok", {
+                duration: 3000,
+              }));
+          });
         }
         else {
           this.loginError = 'not correct email or password';

@@ -1,6 +1,7 @@
 import {Component, OnInit, EventEmitter, Output} from '@angular/core';
 import {User} from '../user';
 import {ActivatedRoute, Route, Router} from "@angular/router";
+import {validate} from "codelyzer/walkerFactory/walkerFn";
 @Component({
   selector: 'mrr-create-user-view',
   templateUrl: 'create-user-view.component.html',

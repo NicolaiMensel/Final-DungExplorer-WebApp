@@ -43,24 +43,8 @@
   cursor: pointer;
 }
 
-.input-field{
-  margin-top: 30px;
-  background: none;
-  border: none;
-  border-bottom: 1px solid black;
-  font-family: black-knight;
-  font-size: 25px;
-}
-
-.input-field::placeholder{
-  color: black;
-}
-
-.input-field:focus {
-  outline: -webkit-focus-ring-color auto 0px;
-}
 .register-button {
-  margin-top: 65px;
+  margin-top: 63px;
   font-size: 20px;
   font-family: black-knight;
   text-shadow: 2px 2px black;
@@ -77,6 +61,23 @@
   background-image: url('/assets/images/knight-icon-black.png');
   border: 2px solid black;
   cursor: pointer;
+}
+
+.input-field{
+  margin-top: 30px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid black;
+  font-family: black-knight;
+  font-size: 25px;
+}
+
+.input-field::placeholder{
+  color: black;
+}
+
+.input-field:focus {
+  outline: -webkit-focus-ring-color auto 0px;
 }
 
 input::-webkit-outer-spin-button,

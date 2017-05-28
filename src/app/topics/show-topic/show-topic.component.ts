@@ -8,6 +8,8 @@ import {User} from "../../users/user";
 import {Debug} from "ng2-img-cropper/src/exif";
 import {log} from "util";
 import {Observable} from "rxjs/Observable";
+import {ValidationErrors} from "@angular/forms";
+import {MdSnackBar} from "@angular/material";
 
 @Component({
   selector: 'app-show-topic',
@@ -18,7 +20,7 @@ export class ShowTopicComponent implements OnInit {
 
   topic : Topic;
 
-  constructor(private router : Router, private route : ActivatedRoute, private topicService : TopicService, private userService : UsersService) {
+  constructor(public loginValidationBar: MdSnackBar, private router : Router, private route : ActivatedRoute, private topicService : TopicService, private userService : UsersService) {
   }
 
   ngOnInit() {
@@ -65,7 +67,10 @@ deleteTopic(topic : Topic)
     }
     this.doDelete(t).subscribe();
   }
-  return this.doDelete(topic).subscribe(() => topic.topicType == TopicTypes.Comments ? window.location.reload() : this.router.navigate(['/topics']));
+  return this.doDelete(topic).subscribe(deletedTopic => topic.topicType == TopicTypes.Comments ? window.location.reload() : this.router.navigate(['/topics'])
+    .then(() => this.loginValidationBar.open("Topic has been deleted!", "Ok", {
+    duration: 3000,
+  })));
 
 }
 
