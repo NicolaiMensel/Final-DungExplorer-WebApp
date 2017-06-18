@@ -3,14 +3,13 @@
   <div class="container-border" align="center">
     <div class="lock-container" >
       <div class="login-content" >
-
         <p *ngIf="signInError && signInError.length > 0"
            class="error-message">
           {{signInError}}
         </p>
         <button class="back-button" (click)="goBack()">Back</button>
         <button class="register-button" (click)="register()">Register</button>
-        <form (ngSubmit)="tryLogin($event)">
+        <form (ngSubmit)="tryLogin()">
           <div class="center-content" >
               <input class="input-field"
                      placeholder="Email"
@@ -23,7 +22,6 @@
                      type="password"
                      [(ngModel)]="user.password">
           </div>
-
               <button id="test" type="submit" class="sign-in-button">Sign in</button>
 
         </form>

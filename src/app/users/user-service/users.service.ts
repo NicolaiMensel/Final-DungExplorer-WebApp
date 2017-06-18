@@ -15,7 +15,6 @@ export class UsersService {
   createUser(newUser: User): Promise<User> {
     let headers: Headers = new Headers();
     headers.append("Content-Type", "application/json");
-    // headers.append("Authorization", "Bearer " + localStorage.getItem('token').substring(10,158));
     return this.http
       .post(this.apiUrl, JSON.stringify(newUser),
         {headers: headers})

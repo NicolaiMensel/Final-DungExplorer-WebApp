@@ -16,7 +16,6 @@ export class AuthService {
     headers.append("Authorization", "Basic " + btoa(username + ":" + password));
     return this.http.post(this.apiUrl,null,{headers: headers})
       .map((response: Response) => {
-        // login successful if there's a jwt token in the response
         let token = response.json() && response.json().token;
         if (token) {
           this.token = token;

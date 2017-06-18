@@ -18,7 +18,6 @@ export class ToolbarComponent implements OnInit {
   {
   }
   ngOnInit() {
-    console.log(this.authorized);
     console.log(localStorage.getItem('token'));
 
   }

@@ -33,14 +33,14 @@ export class LoginComponent implements OnInit {
     }
     this.request = this.authService
       .login(user.email, user.password)
-      .subscribe((lUser) => {
-        if(lUser.length > 0)
+      .subscribe(token => {
+        if(token.length > 0)
         {
           this.loginError=null;
 
           this.userService.getMe().subscribe(user => {localStorage.setItem('loggedInUser', JSON.stringify(user));
             this.router.navigate([this.returnUrl.toString().replace(",", "/")])
-              .then(() => this.loginValidationBar.open("Welcome " + user.name + "!", "Ok", {
+              .then(() => this.loginValidationBar.open("Welcome " + user.name + "!", "Thanks!", {
                 duration: 3000,
               }));
           });

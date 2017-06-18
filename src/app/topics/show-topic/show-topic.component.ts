@@ -56,7 +56,8 @@ export class ShowTopicComponent implements OnInit {
 
   addComment(commentData : Topic[])
   {
-    this.topicService.addTopic(commentData[0].id, commentData[1]).subscribe(topics => window.location.reload());
+    this.topicService.addTopic(commentData[0].id, commentData[1]).subscribe(() => this.topicService.getTopic(this.topic.id)
+      .subscribe(refreahedTopic => this.topic = this.getTopicData(refreahedTopic)));
   }
 
 deleteTopic(topic : Topic)
@@ -67,7 +68,7 @@ deleteTopic(topic : Topic)
     }
     this.doDelete(t).subscribe();
   }
-  return this.doDelete(topic).subscribe(deletedTopic => topic.topicType == TopicTypes.Comments ? window.location.reload() : this.router.navigate(['/topics'])
+  return this.doDelete(topic).subscribe(deletedTopic => topic.topicType == TopicTypes.Comments ? this.topicService.getTopic(this.topic.id).subscribe(refreahedTopic => this.topic = this.getTopicData(refreahedTopic)) : this.router.navigate(['/topics'])
     .then(() => this.loginValidationBar.open("Topic has been deleted!", "Ok", {
     duration: 3000,
   })));

@@ -16,8 +16,6 @@ export class TopicService {
 
   //Takes a topic, writes it to the API. Writes an error in the console of the browser if it fails.
   create(newTopic: Topic): Observable<Topic> {
-    console.log(newTopic);
-    console.log(localStorage.getItem('token'))
     let headers: Headers = new Headers();
     headers.append("Content-Type", "application/json");
     headers.append("Authorization", "Bearer " + localStorage.getItem('token').substring(10, 158));

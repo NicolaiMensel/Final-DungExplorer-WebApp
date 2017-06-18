@@ -21,7 +21,7 @@ export class CreateUserViewComponent implements OnInit {
   }
 
   tryRegister(){
-    this.tryRegisterEmitter.emit(this.newUser);
+    this.tryRegisterEmitter.emit(this.newUser); // eventemitter = datasender
   }
 
   ngOnInit() {

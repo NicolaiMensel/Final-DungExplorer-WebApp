@@ -46,7 +46,9 @@ export class CreateTopicViewComponent implements OnInit {
   tryCreateForum(){
     // Dummy picture - Image storage not implemented yet!
     this.newTopic.imageUrl = "https://i.ytimg.com/vi/8TH288wBec4/maxresdefault.jpg";
-      this.tryCreateEmitter.emit(this.newTopic);
+
+    this.tryCreateEmitter.emit(this.newTopic);
+
     this.newTopic = new Topic();
   }
 
